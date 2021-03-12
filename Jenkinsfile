@@ -11,7 +11,8 @@ pipeline {
 
     tools {
         // Install the Maven version configured as "mmaven" and add it to the path.
-        maven params.MAVEN_TOOL
+        // maven params.MAVEN_TOOL
+        maven "${params.MAVEN_TOOL}"
     }
     
     environment {
