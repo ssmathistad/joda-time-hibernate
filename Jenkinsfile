@@ -47,8 +47,9 @@ pipeline {
                 //sh 'jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD'
                 //sh('jfrog rt u "target/*.jar" ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=%params.USER% --password=%params.PASSWORD%') // did not like sub
                 //sh('jfrog rt u "target/*.jar" $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=%params.USER% --password=%params.PASSWORD%') // unsupported protocol scheme ""
-                //sh('jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=%params.USER% --password=%params.PASSWORD%') // wrong number of arguments
-                sh "jfrog rt u 'target/*.jar' ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=%params.USER% --password=%params.PASSWORD%"
+                //sh('jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=%params.USER% --password=%params.PASSWORD%') // says wrong number of arguments
+                //sh "jfrog rt u 'target/*.jar' ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=%params.USER% --password=%params.PASSWORD%" // gives login error
+                sh "jfrog rt u 'target/*.jar' $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=\$params.USER --password=\$params.PASSWORD"
             }
         }
     }
