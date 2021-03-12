@@ -38,8 +38,6 @@ pipeline {
             steps {
                 junit '**/target/surefire-reports/TEST-*.xml'
                 archiveArtifacts 'target/*.jar'  
-                //sh 'jfrog rt u "target/*.jar" ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=$params.USER --password=$params.PASSWORD'
-                //sh 'jfrog rt u "target/*.jar" $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD'
                 sh "jfrog rt u 'target/*.jar' ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=${params.USER} --password=${params.PASSWORD}"
             }
         }
