@@ -1,15 +1,13 @@
 pipeline {
     agent any
     
-     properties([
-      parameters([
-        string(name: 'ARTIFACTORY_SERVER', defaultValue: ''),
-        string(name: 'SERVER_URL', defaultValue: ''),
-        string(name: 'MAVEN_TOOL', defaultValue: ''),
-        string(name: 'USER', defaultValue: ''),
-        string(name: 'PASSWORD', defaultValue: ''),
-      ])
-    ])
+    parameters {
+        string(name: 'ARTIFACTORY_SERVER', defaultValue: '')
+        string(name: 'SERVER_URL', defaultValue: '')
+        string(name: 'MAVEN_TOOL', defaultValue: '')
+        password(name: 'USER', defaultValue: 'SECRET')
+        password(name: 'PASSWORD', defaultValue: 'SECRET')
+    }
 
     tools {
         // Install the Maven version configured as "mmaven" and add it to the path.
