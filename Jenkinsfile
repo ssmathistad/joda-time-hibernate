@@ -44,7 +44,8 @@ pipeline {
                 //sh "jfrog rt u 'target/*.jar' ${params.ARTIFACTORY_SERVER} --url=${params.SERVER_URL} --user=${params.USER} --password=${params.PASSWORD}" // works
                 //sh 'jfrog rt u "target/*.jar" $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD'
                 //sh "jfrog rt u 'target/*.jar' $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD" // works
-                sh 'jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD'
+                //sh 'jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD'
+                sh('jfrog rt u target/*.jar $params.ARTIFACTORY_SERVER --url=$params.SERVER_URL --user=$params.USER --password=$params.PASSWORD')
             }
         }
     }
