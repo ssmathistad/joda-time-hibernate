@@ -494,7 +494,21 @@
           </plugin>
         </plugins>
       </build>
+        
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>4dea3dfdcdfb-releases</name>
+            <url>http://172.18.0.3:8081/artifactory/JODA-TIME-libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>4dea3dfdcdfb-snapshots</name>
+            <url>http://172.18.0.3:8081/artifactory/JODA-TIME-libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 
+      <!--
       <repositories>
         <repository>
           <id>jboss-public-repository-group</id>
@@ -511,6 +525,7 @@
           </snapshots>
         </repository>
       </repositories>
+      -->
     </profile>
   </profiles>
 
