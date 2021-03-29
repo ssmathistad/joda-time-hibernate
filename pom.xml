@@ -145,7 +145,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-              <Implementation-Build>TEST${buildNumber}</Implementation-Build>
+              <Implementation-Build>{project.artifactId}-${project.version}-r${buildNumber}</Implementation-Build>
             </manifestEntries>
           </archive>
         </configuration>
