@@ -114,7 +114,7 @@
           <format>{0, number}</format>  
           <format>{1,date,yyyy-MM-dd HH:mm:ss}</format>
           <items>
-            <item>buildNumber</item>
+            <item>buildNumber0</item>
             <item>timestamp</item>
           </items>
 
@@ -153,7 +153,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-              <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Implementation-Build>-r${buildNumber}</Implementation-Build>
               <Implementation-Build2>${timestamp}</Implementation-Build2>
             </manifestEntries>
           </archive>
