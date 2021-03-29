@@ -110,13 +110,17 @@
         <configuration>
           <doCheck>false</doCheck>
           <doUpdate>false</doUpdate>
-            
+            <!--
           <format>{0, number}</format>  
           <format>{1,date,yyyy-MM-dd HH:mm:ss}</format>
           <items>
             <item>buildNumber0</item>
             <item>timestamp</item>
           </items>
+            -->
+          <script>
+              $project.artifact.version = "${buildNumber}";
+          </script>
 
             <!--
           <format>{0,date,yyyy-MM-dd HH:mm:ss}</format>
@@ -155,6 +159,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
             <manifestEntries>
               <Implementation-Build>-r${buildNumber}</Implementation-Build>
               <Implementation-Build2>${timestamp}</Implementation-Build2>
+              <Implementation-Build3>${project.artifact.version}</Implementation-Build3>
             </manifestEntries>
           </archive>
         </configuration>
