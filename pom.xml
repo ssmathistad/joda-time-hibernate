@@ -9,7 +9,7 @@
   <artifactId>joda-time-hibernate</artifactId>
   <packaging>jar</packaging>
   <name>Joda-Time-Hibernate</name>
-  <version>1.6-SNAPSHOT</version>
+  <version>1.5-SNAPSHOT</version>
   <description>Contribution to Joda-Time that adds Hibernate support</description>
   <url>http://www.joda.org/joda-time-hibernate/</url>
 
@@ -52,7 +52,7 @@
   <!-- ==================================================================== -->
   <licenses>
     <license>
-      <name>Apache 2</name>
+      <name>Apache License, Version 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
       <distribution>repo</distribution>
     </license>
@@ -81,38 +81,6 @@
     </resources>
     <!-- define build -->
     <plugins>
-      <plugin>
-	  <groupId>org.apache.maven.plugins</groupId>
-	  <artifactId>maven-release-plugin</artifactId>
-	  <version>2.5.3</version>
-      </plugin>
-      <!--
-      <plugin>
-	    <groupId>org.apache.maven.plugins</groupId>
-	    <artifactId>maven-deploy-plugin</artifactId>
-	    <version>2.8.2</version>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>3.0.0-M3</version>
-        <executions>
-          <execution>
-            <id>enforce-maven</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>3.0</version>
-                </requireMavenVersion>
-              </rules>    
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -246,13 +214,11 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>${maven-compiler-plugin.version}</version>
         </plugin>
-		<!--
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
           <version>${maven-deploy-plugin.version}</version>
         </plugin>
-		-->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-dependency-plugin</artifactId>
@@ -338,11 +304,9 @@
   </build>
 
   <!-- ==================================================================== -->
-  <!--
   <prerequisites>
     <maven>3.0.4</maven>
   </prerequisites>
-  -->
   <dependencies>
     <dependency>
       <groupId>joda-time</groupId>
@@ -365,7 +329,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.2</version>
+      <version>4.13.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -446,25 +410,10 @@
           </reportSet>
         </reportSets>
       </plugin>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-release-plugin</artifactId>
-            <version>2.5.3</version>
-        </plugin>
     </plugins>
   </reporting>
 
   <!-- ==================================================================== -->
-
-	<!--
-  <distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
-	-->
-	
     <distributionManagement>
         <repository>
             <id>central</id>
@@ -489,27 +438,7 @@
         </property>
       </activation>
       <build>
-        <finalName>$\{project.artifactId}-$\{project.version}-r$\{buildNumber}</finalName>
         <plugins>
-
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>buildnumber-maven-plugin</artifactId>
-            <version>1.4</version>
-            <executions>
-              <execution>
-                <phase>validate</phase>
-                <goals>
-                  <goal>create</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <doCheck>true</doCheck>
-              <doUpdate>true</doUpdate>
-            </configuration>
-          </plugin>
-
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-toolchains-plugin</artifactId>
@@ -561,7 +490,6 @@
           </snapshots>
         </repository>
       </repositories>
-
     </profile>
   </profiles>
 
@@ -573,7 +501,7 @@
     <maven-checkstyle-plugin.version>2.13</maven-checkstyle-plugin.version>
     <maven-clean-plugin.version>2.6.1</maven-clean-plugin.version>
     <maven-compiler-plugin.version>3.2</maven-compiler-plugin.version>
-    <!-- <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version> -->
+    <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
     <maven-dependency-plugin.version>2.9</maven-dependency-plugin.version>
     <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
     <maven-install-plugin.version>2.5.2</maven-install-plugin.version>
