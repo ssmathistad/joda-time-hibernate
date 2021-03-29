@@ -159,7 +159,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
             <manifestEntries>
               <Implementation-Build>-r${buildNumber}</Implementation-Build>
               <Implementation-Build2>${timestamp}</Implementation-Build2>
-              <Implementation-Build3>${project.artifact.version}</Implementation-Build3>
+              <Implementation-Build3>${buildNumber}</Implementation-Build3>
             </manifestEntries>
           </archive>
         </configuration>
