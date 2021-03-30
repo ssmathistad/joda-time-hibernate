@@ -100,6 +100,7 @@
             <configuration>
                 <timestampFormat>yyyy-MM-dd HH:mm:ss</timestampFormat>
                 <timestampPropertyName>myTimeStampNumberVariable</timestampPropertyName>
+                <shortRevisionLength>5</shortRevisionLength>
                 <!--<buildNumberPropertyName>myBuildNumberVariable</buildNumberPropertyName>-->
                 <!-- formats the timestamp all together like 2016-04-04 14:17:05.123 and puts 
                     it in the ${myBuildNumberVariable} buildProperty -->
