@@ -170,7 +170,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-                <Implementation-Build>${myBuildNumberVariable}</Implementation-Build>
+                <Implementation-Build>${buildNumber}</Implementation-Build>
                 <!--
               <Implementation-Build>-r${buildNumber}</Implementation-Build>
               <Implementation-Build2>${timestamp}</Implementation-Build2>
@@ -389,7 +389,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
       </plugins>
     </pluginManagement>
 
-    <finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
+    <!--<finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>-->
   </build>
 
   <!-- ==================================================================== -->
