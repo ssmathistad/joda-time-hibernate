@@ -91,27 +91,15 @@
         <executions>
 
           <execution>
-            <id>create-timestamp-id</id>
+            <id>create-id</id>
             <phase>validate</phase>
             <goals>
                 <goal>create-timestamp</goal>
+                <goal>create</goal>
             </goals>
             <configuration>
                 <timestampFormat>yyyy-MM-dd HH:mm:ss</timestampFormat>
                 <timestampPropertyName>myTimeStampNumberVariable</timestampPropertyName>
-                <!-- formats the timestamp all together like 2016-04-04 14:17:05.123 and puts 
-                    it in the ${myBuildNumberVariable} buildProperty -->
-            </configuration>
-          </execution>
-
-          <execution>
-            <id>create-buildnumber-id</id>
-            <phase>validate</phase>
-            <goals>
-                <goal>create-timestamp</goal>
-            </goals>
-            <configuration>
-                <buildNumberFormat>yyyy-MM-dd HH:mm:ss.S</buildNumberFormat>
                 <buildNumberPropertyName>myBuildNumberVariable</buildNumberPropertyName>
                 <!-- formats the timestamp all together like 2016-04-04 14:17:05.123 and puts 
                     it in the ${myBuildNumberVariable} buildProperty -->
