@@ -100,7 +100,7 @@
             <configuration>
                 <timestampFormat>yyyy-MM-dd HH:mm:ss</timestampFormat>
                 <timestampPropertyName>myTimeStampNumberVariable</timestampPropertyName>
-                <buildNumberPropertyName>myBuildNumberVariable</buildNumberPropertyName>
+                <!--<buildNumberPropertyName>myBuildNumberVariable</buildNumberPropertyName>-->
                 <!-- formats the timestamp all together like 2016-04-04 14:17:05.123 and puts 
                     it in the ${myBuildNumberVariable} buildProperty -->
             </configuration>
@@ -119,7 +119,7 @@
         -->
           
         <configuration>
-          <revisionOnScmFailure>no.scm.config.in.pom</revisionOnScmFailure>
+          <!--<revisionOnScmFailure>no.scm.config.in.pom</revisionOnScmFailure>-->
           <doCheck>false</doCheck>
           <doUpdate>false</doUpdate>
             <!--
@@ -388,6 +388,8 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
         </plugin>
       </plugins>
     </pluginManagement>
+
+    <finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
   </build>
 
   <!-- ==================================================================== -->
