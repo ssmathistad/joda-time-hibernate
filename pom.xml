@@ -174,7 +174,7 @@ $\{project.artifactId}-$\{project.version}-r$\{buildNumber}
               <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
             </manifest>
             <manifestEntries>
-                <Implementation-Identifier>$r{buildNumber} ${maven.build.timestamp}</Implementation-Identifier>
+                <Implementation-Identifier>-r ${buildNumber} ${maven.build.timestamp}</Implementation-Identifier>
                 <!--
               <Implementation-Build>-r${buildNumber}</Implementation-Build>
               <Implementation-Build2>${timestamp}</Implementation-Build2>
