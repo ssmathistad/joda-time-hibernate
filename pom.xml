@@ -100,11 +100,13 @@
             <configuration>
                 <!--<timestampFormat>{yyyy-MM-dd HH:mm:ss}</timestampFormat>-->
                 <shortRevisionLength>5</shortRevisionLength>
+                <!-- !!
                 <format>{0} {1,date,yyyy-MM-dd HH:mm:ss}</format>
                 <items>
                     <item>buildNumber</item>
                     <item>timestamp</item>
                 </items>
+                -->
             </configuration>
           </execution>
             
