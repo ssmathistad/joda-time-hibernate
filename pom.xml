@@ -98,7 +98,7 @@
                 <goal>create</goal>
             </goals>
             <configuration>
-                <timestampFormat>{yyyy-MM-dd HH:mm:ss}</timestampFormat>
+                <!--<timestampFormat>{yyyy-MM-dd HH:mm:ss}</timestampFormat>-->
                 <shortRevisionLength>5</shortRevisionLength>
             </configuration>
           </execution>
